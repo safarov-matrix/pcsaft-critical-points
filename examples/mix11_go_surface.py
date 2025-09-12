@@ -1,7 +1,6 @@
 """
 examples/mix11_go_surface.py
-Full GO/DE example for an 11-component mixture using Thermopack PC-SAFT,
-including 2D/3D plotting of log F(T,V).
+Full GO/DE example for an 11-component mixture using Thermopack PC-SAFT, including 2D/3D plotting of log F(T,V).
 
 - Uses Thermopack's PC-SAFT EOS (we do NOT implement PC-SAFT ourselves).
 - All binary interaction parameters k_ij are set to 0 (predictive baseline).
@@ -30,9 +29,8 @@ from scipy.interpolate import RegularGridInterpolator
 import thermopack as tp
 
 
-# --------------------------
 # Mixture + EOS setup
-# --------------------------
+
 comp_string = "CO2,N2,C1,C2,C3,IC4,NC4,IC5,NC5,NC6,NC7"
 eos = tp.pcsaft.pcsaft(comp_string)
 nc = 11
@@ -52,10 +50,8 @@ n = n_raw / jnp.sum(n_raw)
 # search bounds in (T, V)
 bounds = [(150.0, 300.0), (1.0e-4, 1.30e-4)]
 
-
-# --------------------------
 # Objective function pieces
-# --------------------------
+
 def min_eig_dmudn(eos, n_vec, T, V):
     """Smallest eigenvalue of dμ/dn at (T,V,n)."""
     mu, dmudn = eos.chemical_potential_tv(float(T), float(V), np.array(n_vec),
@@ -119,9 +115,9 @@ def minimize_ObjF(eos, n_vec, bounds, pop_size=20, max_iter=600, mutation=(0.5, 
     return (float(res.x[0]), float(res.x[1])), float(res.fun)
 
 
-# --------------------------
+
 # Run optimization
-# --------------------------
+
 (T_opt, V_opt), F_opt = minimize_ObjF(eos, n, bounds)
 print(f"Optimal T, V = {T_opt:.6g} K, {V_opt:.6g} m^3/mol")
 print(f"Optimal F     = {F_opt:.6g}")
@@ -141,9 +137,9 @@ except Exception as e:
     print("λ_min diagnostic failed:", str(e))
 
 
-# --------------------------
-# Derived densities (optional)
-# --------------------------
+
+# Derived densities
+
 comp_order = ["CO2","N2","C1","C2","C3","IC4","NC4","IC5","NC5","NC6","NC7"]
 M_i = np.array([
     44.0095e-3, 28.0134e-3, 16.043e-3, 30.069e-3, 44.097e-3,
@@ -161,9 +157,9 @@ print(f"ρ_molar      = {rho_molar:.6g} mol/m^3")
 print(f"ρ_mass       = {rho_mass:.6g}  kg/m^3")
 
 
-# --------------------------
+
 # Build grid and evaluate F
-# --------------------------
+
 NT, NV = 200, 200
 Tvec = np.linspace(bounds[0][0], bounds[0][1], NT)      # K
 Vvec = np.linspace(bounds[1][0], bounds[1][1], NV)      # m^3/mol
@@ -183,9 +179,8 @@ Zplot = np.log(Z + eps)
 Zplot[~np.isfinite(Zplot)] = np.nan
 
 
-# --------------------------
+
 # 2D heatmap
-# --------------------------
 os.makedirs("results", exist_ok=True)
 
 norm = colors.Normalize(vmin=np.nanmin(Zplot), vmax=np.nanmax(Zplot))
@@ -239,9 +234,7 @@ fig.savefig("results/GO_surface_heatmap_pub_clean.pdf",  bbox_inches="tight")
 plt.show()
 
 
-# --------------------------
 # 3D surface
-# --------------------------
 Zlog = np.log(np.maximum(Z, eps))
 Zlog[~np.isfinite(Zlog)] = np.nan
 
