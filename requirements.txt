@@ -1,0 +1,6 @@
+thermopack
+jax
+numpy
+pandas
+matplotlib
+scipy
