@@ -25,7 +25,7 @@ jax.config.update("jax_enable_x64", True)
 from scipy.optimize import differential_evolution
 import thermopack as tp
 
-# ------------------- Configuration -------------------
+
 
 COMP_STRING = "CO2,N2,C1,C2,C3,IC4,NC4,IC5,NC5,NC6,NC7"
 
@@ -104,7 +104,6 @@ def run_de_search(eos, n_vec, bounds):
         return objective_F(eos, n_vec, T_, V_)
     return differential_evolution(wrapper, bounds=bounds, **DE_CFG)
 
-# ------------------- CLI entrypoint -------------------
 
 def main():
     print("[INFO] Building PC-SAFT EOS (Thermopack)…")
