@@ -51,7 +51,6 @@ n = n_raw / jnp.sum(n_raw)
 bounds = [(150.0, 300.0), (1.0e-4, 1.30e-4)]
 
 # Objective function pieces
-
 def min_eig_dmudn(eos, n_vec, T, V):
     """Smallest eigenvalue of dμ/dn at (T,V,n)."""
     mu, dmudn = eos.chemical_potential_tv(float(T), float(V), np.array(n_vec),
@@ -117,7 +116,6 @@ def minimize_ObjF(eos, n_vec, bounds, pop_size=20, max_iter=600, mutation=(0.5, 
 
 
 # Run optimization
-
 (T_opt, V_opt), F_opt = minimize_ObjF(eos, n, bounds)
 print(f"Optimal T, V = {T_opt:.6g} K, {V_opt:.6g} m^3/mol")
 print(f"Optimal F     = {F_opt:.6g}")
@@ -139,7 +137,6 @@ except Exception as e:
 
 
 # Derived densities
-
 comp_order = ["CO2","N2","C1","C2","C3","IC4","NC4","IC5","NC5","NC6","NC7"]
 M_i = np.array([
     44.0095e-3, 28.0134e-3, 16.043e-3, 30.069e-3, 44.097e-3,
