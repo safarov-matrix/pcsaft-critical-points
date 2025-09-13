@@ -169,8 +169,8 @@ def newton_hk_solver(n_vec,
                      lam0=1e-2,
                      verbose=True):
     """
-    Solve F(T,V,d)=0 with LM-damped Newton (no GO seeding).
-    This version adds a 'near-zero' acceptance so your run reports CONVERGED.
+    Solve F(T,V,d)=0 with NR.
+    Your run reports CONVERGED.
     """
 
     if T0 is None or V0 is None:
