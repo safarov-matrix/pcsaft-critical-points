@@ -17,9 +17,9 @@ Multicomponent mixtures (Dimitrakopoulos \*et al.\*, 2014)
 
 File: `data/mixtures\_dim-wen-2014.csv`  
 
-\*\*Columns:\*\*
+Columns:
 
-\- `Mixture\_No`: index (1–44, as in Table S1 of your manuscript)  
+\- `Mixture_No`: index (1–44, as in Table S1 of your manuscript)  
 
 \- `CO2`, `N2`, `C1`, `C2`, `C3`, `iC4`, `nC4`, `iC5`, `nC5`, `nC6`, `nC7`: mole fractions of each component (dimensionless).  
 
