@@ -12,6 +12,32 @@ Two computational strategies are implemented:
 
 Note: This project uses the readily available PC-SAFT EOS implementation from [Thermopack](https://github.com/thermotools/thermopack).  
 
+
+Pure component PC-SAFT parameters and critical data:
+
+File: `data/pure_components_pcsaft_params.csv`
+
+Columns:
+
+- `Component`: identifier (Thermopack ID, e.g., C1, C2, nC4, CO2, N2)
+- `m`: segment number (dimensionless)
+- `sigma_A`: segment diameter [Å]
+- `eps_k`: segment energy parameter [K]
+- `omega`: acentric factor (dimensionless)
+- `Tc_exp`: experimental critical temperature [K]
+- `Pc_exp`: experimental critical pressure [MPa]
+- `Source`: reference for the EOS parameters and critical data
+
+Sources:  
+- J. Gross, G. Sadowski, Ind. Eng. Chem. Res. 40 (2001) 1244–1260.  
+- D. Bücker, W. Wagner, J. Phys. Chem. Ref. Data 35 (2006) 205–266, 929–1019.  
+- E.W. Lemmon, M.O. McLinden, W. Wagner, J. Chem. Eng. Data 54 (2009) 3141–3180.  
+- D. Ambrose, J. Walton, Pure Appl. Chem. 61 (1989) 1395–1403.  
+- R. Span, W. Wagner, J. Phys. Chem. Ref. Data 25 (1996) 1509–1596.  
+- R. Span et al., J. Phys. Chem. Ref. Data 29 (2000) 1361–1433.  
+- U. Setzmann, W. Wagner, J. Phys. Chem. Ref. Data 20 (1991) 1061–1155.  
+- J. Shi et al., AIChE J. 70 (2024) e18466.  
+
 Multicomponent mixtures (Dimitrakopoulos et al., 2014)
 
 File: `data/mixtures\_dim-wen-2014.csv`  
