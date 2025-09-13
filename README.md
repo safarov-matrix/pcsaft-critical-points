@@ -12,7 +12,7 @@ Two computational strategies are implemented:
 
 Note: This project uses the readily available PC-SAFT EOS implementation from [Thermopack](https://github.com/thermotools/thermopack).  
 
-Multicomponent mixtures (Dimitrakopoulos \*et al.\*, 2014)
+Multicomponent mixtures (Dimitrakopoulos et al., 2014)
 
 File: `data/mixtures\_dim-wen-2014.csv`  
 
@@ -26,7 +26,7 @@ Columns:
 
 Source: P. Dimitrakopoulos, W. Jia, C. Li, An improved computational method for the calculation of mixture liquid–vapor critical points, Int. J. Thermophys. 35 (2014) 865–889. https://doi.org/10.1007/s10765-014-1680-7.
 
-Binary critical loci (Hicks \\\& Young, 1975):
+Binary critical loci (Hicks & Young, 1975):
 
 Columns:
 
