@@ -12,18 +12,22 @@ Two computational strategies are implemented:
 
 In this study, 11 pure compounds (hydrocarbon and hon-hydrocarbon) and 44 mixtures (from 2 components to 11 components) are tested. Additionally, 6 binary mixtures from a different compilations are used to build composition-dependent critical loci using both computational methods.
 
-Note: This project implements the readily available PC-SAFT EOS from [Thermopack](https://github.com/thermotools/thermopack).  
+Note: This project implements the readily available PC-SAFT EOS from [Thermopack](https://github.com/thermotools/thermopack) and assesses the performance of two computational techniques. The model used in this work is based on original PC-SAFT EOS by Gross and Sadowski.
 
 Sources:
-[1] SINTEF Energy Research, NTNU, ThermoPack [software], GitHub repository.https://github.com/thermotools/thermopack, accessed 8 December 2024.
 
-[2] Ø. Wilhelmsen, A. Aasen, G. Skaugen, P. Aursand, A. Austegard, E. Aursand, M.Aa. Gjennestad, H. Lund, G. Linga, M. Hammer, Thermodynamic modeling with equations of state: Present challenges with established methods, Ind. Eng. Chem. Res. 56 (2017) 3503–3515. https://doi.org/10.1021/acs.iecr.7b00317.
+[1] J. Gross, G. Sadowski, Perturbed-chain SAFT: An equation of state based on a perturbation theory for chain molecules, Ind. Eng. Chem. Res. 40 (2001) 1244–1260. https://doi.org/10.1021/ie0003887.
 
-[3] P. Aursand, M.Aa. Gjennestad, E. Aursand, M. Hammer, Ø. Wilhelmsen, The spinodal of single- and multi-component fluids and its role in the development of modern equations of state, Fluid Phase Equilib. 436 (2017) 98–112. https://doi.org/10.1016/j.fluid.2016.12.018.
+[2] SINTEF Energy Research, NTNU, ThermoPack [software], GitHub repository.https://github.com/thermotools/thermopack, accessed 8 December 2024.
 
-[4] A. Aasen, M. Hammer, Å. Ervik, E.A. Müller, Ø. Wilhelmsen, Equation of state and force fields for Feynman–Hibbs-corrected Mie fluids. I. Application to pure helium, neon, hydrogen, and deuterium, J. Chem. Phys. 151 (2019) 035103. https://doi.org/10.1063/1.5111364.
+[3] Ø. Wilhelmsen, A. Aasen, G. Skaugen, P. Aursand, A. Austegard, E. Aursand, M.Aa. Gjennestad, H. Lund, G. Linga, M. Hammer, Thermodynamic modeling with equations of state: Present challenges with established methods, Ind. Eng. Chem. Res. 56 (2017) 3503–3515. https://doi.org/10.1021/acs.iecr.7b00317.
 
-[5] T. van Westen, M. Hammer, B. Hafskjold, A. Aasen, J. Gross, Ø. Wilhelmsen, Perturbation theories for fluids with short-ranged attractive forces: A case study of the Lennard-Jones spline fluid, J. Chem. Phys. 156 (2022) 104504. https://doi.org/10.1063/5.0082690.
+[4] P. Aursand, M.Aa. Gjennestad, E. Aursand, M. Hammer, Ø. Wilhelmsen, The spinodal of single- and multi-component fluids and its role in the development of modern equations of state, Fluid Phase Equilib. 436 (2017) 98–112. https://doi.org/10.1016/j.fluid.2016.12.018.
+
+[5] A. Aasen, M. Hammer, Å. Ervik, E.A. Müller, Ø. Wilhelmsen, Equation of state and force fields for Feynman–Hibbs-corrected Mie fluids. I. Application to pure helium, neon, hydrogen, and deuterium, J. Chem. Phys. 151 (2019) 035103. https://doi.org/10.1063/1.5111364.
+
+[6] T. van Westen, M. Hammer, B. Hafskjold, A. Aasen, J. Gross, Ø. Wilhelmsen, Perturbation theories for fluids with short-ranged attractive forces: A case study of the Lennard-Jones spline fluid, J. Chem. Phys. 156 (2022) 104504. https://doi.org/10.1063/5.0082690.
+
 
 Pure component PC-SAFT parameters and critical data:
 
@@ -41,7 +45,6 @@ Columns:
 - `Source`: reference for the EOS parameters and critical data
 
 Sources:  
-- J. Gross, G. Sadowski, Ind. Eng. Chem. Res. 40 (2001) 1244–1260.  
 - D. Bücker, W. Wagner, J. Phys. Chem. Ref. Data 35 (2006) 205–266, 929–1019.  
 - E.W. Lemmon, M.O. McLinden, W. Wagner, J. Chem. Eng. Data 54 (2009) 3141–3180.  
 - D. Ambrose, J. Walton, Pure Appl. Chem. 61 (1989) 1395–1403.  
