@@ -1,3 +1,19 @@
+"""
+examples/mix11_nr_surface.py
+Full Newton–Raphson (NR) example for an 11-component mixture using Thermopack PC-SAFT, 
+including 2D/3D plotting of log ||F|| (HK residual norm).
+
+- Uses Thermopack's PC-SAFT EOS.
+- All binary interaction parameters k_ij are set to 0 (predictive baseline).
+- Solves Heidemann–Khalil (HK) criticality conditions directly with a damped NR method.
+- Objective: drive HK residuals (g_i, g, h) → 0 at fixed (T,V,n).
+
+Run:
+  pip install -r requirements.txt
+  python examples/mix11_nr_surface.py
+"""
+
+
 #!pip -q install thermopack
 
 import numpy as np
