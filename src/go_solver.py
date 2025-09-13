@@ -1,7 +1,7 @@
 """
 go_solver.py
 ------------
-Global Optimization via Differential Evolution for isolated pure-compound and mixture
+Global Optimization (GO) via Differential Evolution (DE) for isolated pure-compound and mixture
 critical points using Thermopack's original PC-SAFT EOS.
 
 Notes
