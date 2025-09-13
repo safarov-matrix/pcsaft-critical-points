@@ -1,10 +1,9 @@
 """
-src/nr_solver.py
+nr_solver.py
 ----------------
 Newton–Raphson (NR) solver for isolated pure-compound and mixture critical points using Thermopack's original PC-SAFT EOS.
 
-Consistency with GO/DE:
-- Uses the same component list, k_ij=0 predictive baseline, and (T,V) bounds.
+- Uses the same component list as Global Optimization (GO) via Differential Evolution (DE), k_ij=0 predictive baseline, and (T,V) bounds.
 - Fixes overall composition (x = z).
 - Solves HK residuals: [g_i = (H d)_i, g = directional cubic, h = ||d||^2-1].
 - Renormalizes Δn every update.
@@ -17,7 +16,6 @@ Run:
 import numpy as np
 import thermopack as tp
 
-# ---------- Config (mirrors go_solver.py) ----------
 COMP_STRING = "CO2,N2,C1,C2,C3,IC4,NC4,IC5,NC5,NC6,NC7"
 NC = 11
 
@@ -28,14 +26,14 @@ z_raw = np.array(
 )
 z = z_raw / z_raw.sum()
 
-# Same (T,V) search window used in GO example
+# (T,V) search window
 T_BOUNDS = (150.0, 300.0)        # K
 V_BOUNDS = (1.00e-4, 1.30e-4)    # m^3/mol
 
 BIG = 1e8
 
 
-# ---------- EOS + helpers ----------
+# EOS handler
 def build_eos():
     """PC-SAFT from Thermopack; set all k_ij = 0 (predictive baseline)."""
     eos = tp.pcsaft.pcsaft(COMP_STRING)
@@ -101,7 +99,7 @@ def phi_dir(eos, T, V, n_vec, d):
     return float(d @ H @ d)
 
 
-# ---------- HK residuals and Jacobian ----------
+# HK residuals and Jacobian
 def hk_residuals(eos, T, V, d, n_vec, h2=1e-5):
     """
     HK residual vector F = [g_1..g_nc, g, h]:
@@ -158,7 +156,7 @@ def numerical_jacobian(eos, T, V, d, n_vec, hT=None, hV=None, hd=2e-6):
     return J, F0
 
 
-# ---------- Damped Newton solver ----------
+# Newton Solver
 def newton_hk_solver(eos, z_,
                      T0=None, V0=None,
                      max_iter=150,
@@ -171,6 +169,7 @@ def newton_hk_solver(eos, z_,
     Always renormalizes d after a step.
     Accepts “near-zero HK geometry” when residuals are tiny.
     """
+    
     # Initial (T,V) and Δn
     if T0 is None or V0 is None:
         T0, V0 = kay_seed_TV(eos, z_)
@@ -261,7 +260,7 @@ def newton_hk_solver(eos, z_,
     return {"status": "max_iter", "iter": max_iter, **best}
 
 
-# ---------- CLI ----------
+# CLI
 def main():
     eos = build_eos()
     sol = newton_hk_solver(
@@ -279,7 +278,7 @@ def main():
     print(f"v_c*    : {sol['V']:.9f} m^3/mol")
     print(f"||F||   : {sol['norm']:.3e}")
 
-    # Optional: report P at optimum (can be noisy near spinodal)
+    
     try:
         p_out = eos.pressure_tv(sol["T"], sol["V"], z)
         P_opt = p_out[0] if isinstance(p_out, (tuple, list)) else p_out
