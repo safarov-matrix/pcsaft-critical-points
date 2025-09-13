@@ -1,5 +1,4 @@
 """
-examples/mix11_nr_surface.py
 Full Newton–Raphson (NR) example for an 11-component mixture using Thermopack's PC-SAFT EOS, 
 including 2D/3D plotting of log ||F|| (HK residual norm).
 
