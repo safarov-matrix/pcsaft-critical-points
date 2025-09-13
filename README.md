@@ -11,8 +11,7 @@ Note: This project uses the readily available PC-SAFT EOS implementation from [T
 This repository focuses on the computational methods (NR and GO/DE) and their performance comparison.
 
 
-\# Binary critical loci (Hicks \& Young, 1975)
-
+Binary critical loci (Hicks \& Young, 1975):
 
 Columns:
 
