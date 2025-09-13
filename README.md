@@ -20,11 +20,11 @@ Columns:
 
 \- `Comp_1`, `Comp_2`: component identifiers (Thermopack IDs)
 
-\- `z1`: mole fraction of `comp1`
+\- `z1`: mole fraction of `Comp_1`
 
-\- `Tc\_K`: critical temperature \[K]
+\- `Tc_K`: critical temperature \[K]
 
-\- `Pc\_MPa`: critical pressure \[MPa]
+\- `Pc_MPa`: critical pressure \[MPa]
 
 
 Source: J. S. Hicks and S. T. Young, 1975
