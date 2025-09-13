@@ -25,5 +25,4 @@ Columns:
 
 \- `Pc_MPa`: critical pressure \[MPa]
 
-
 Source: C.P. Hicks, C.L. Young, Gas–liquid critical properties of binary mixtures, Chem. Rev. 75 (1975) 119–175. https://doi.org/10.1021/cr60294a001.
