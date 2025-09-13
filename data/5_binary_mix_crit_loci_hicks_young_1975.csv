@@ -1,4 +1,4 @@
-Mixture,Comp_1,Comp_2,z_1,Tc_K,Pc_MPa
+Mixture,Comp_1,Comp_2,z1,Tc_K,Pc_MPa
 C1–C2,C1,C2,0.05000,302.00,5.110
 C1–C2,C1,C2,0.14980,295.00,5.550
 C1–C2,C1,C2,0.19000,283.10,6.200
