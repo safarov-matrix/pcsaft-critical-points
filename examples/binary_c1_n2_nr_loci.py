@@ -8,7 +8,7 @@ including CSV export and an overlay plot against experimental data.
 
 Run:
   pip install -r requirements.txt
-  python examples/binary_c1_n2_nr_locus.py
+  python examples/binary_c1_n2_nr_loci.py
 
 Input:
   data/Methane_Nitrogen_Critical_Data.csv  (experimental points)
