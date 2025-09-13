@@ -1,5 +1,4 @@
 """
-examples/mix11_go_surface.py
 Full GO/DE example for an 11-component mixture using Thermopack's PC-SAFT EOS, 
 including 2D/3D plotting of log F(T,V) (Objective Function).
 
@@ -10,6 +9,7 @@ including 2D/3D plotting of log F(T,V) (Objective Function).
 Run:
   pip install -r requirements.txt
   python examples/mix11_go_surface.py
+
 """
 
 import os
