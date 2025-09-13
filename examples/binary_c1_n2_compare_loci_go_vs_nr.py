@@ -18,18 +18,16 @@ plt.rcParams.update({
     "ps.fonttype": 42,
 })
 
-print("⬆️ Upload 3 CSV files: NR locus, GO locus, and Experimental data (for C1–N2).")
+print("⬆️ Upload 3 CSV files: Newton-Raphson (NR) loci, Global Optimization (GO) loci, and Experimental data (in this example, C1–N2).")
 uploaded = files.upload()
 assert uploaded, "No files uploaded."
 
-# ----- read uploads -----
 dfs = {}
 for name, content in uploaded.items():
     df = pd.read_csv(name)
     df.rename(columns={c: c.strip() for c in df.columns}, inplace=True)
-    dfs[name] = df  # <-- fixed: store the DataFrame
+    dfs[name] = df  
 
-# ----- detect roles -----
 nr_name = None
 go_name = None
 exp_name = None
@@ -43,7 +41,6 @@ for name, df in dfs.items():
     elif "nr" in name.lower():
         nr_name = name
 
-# fallback by shape if needed
 candidates = [n for n in dfs if n not in {exp_name}]
 if go_name is None or nr_name is None:
     model_like = [n for n in candidates if {"Tc[K]", "Pc[MPa]"}.issubset(set(dfs[n].columns))]
@@ -72,7 +69,7 @@ if "z1" not in exp.columns:
 if "z1" not in exp.columns:
     raise ValueError("Experimental CSV needs a CH4 composition column (e.g., z1 or z1_CH4/x1).")
 
-# NR
+# NR loci
 df_nr = dfs[nr_name].copy()
 if "z1" not in df_nr.columns:
     if "z2" in df_nr.columns:
@@ -80,7 +77,7 @@ if "z1" not in df_nr.columns:
     else:
         raise ValueError("NR CSV must include 'z1' (or 'z2').")
 
-# GO
+# GO loci
 df_go = dfs[go_name].copy()
 if "z1" not in df_go.columns:
     if "z2" in df_go.columns:
@@ -96,14 +93,13 @@ def _clean(df):
 df_nr = _clean(df_nr)
 df_go = _clean(df_go)
 
-# limit experiment to overlap
 zmin = max(df_nr["z1"].min(), df_go["z1"].min())
 zmax = min(df_nr["z1"].max(), df_go["z1"].max())
 exp_keep = exp[(exp["z1"] >= zmin) & (exp["z1"] <= zmax)].reset_index(drop=True)
 
 print(f"Counts → NR: {len(df_nr)}  GO: {len(df_go)}  EXP used: {len(exp_keep)}")
 
-# ---------- build lines ----------
+# building lines
 def line_from_nr(df, npts=1500):
     z = df["z1"].to_numpy()
     T = df["Tc[K]"].to_numpy()
@@ -127,7 +123,7 @@ def line_from_go(df, npts=1500, s_factor=0.002):
 T_nr, P_nr, Tline_nr, Pline_nr = line_from_nr(df_nr)
 T_go, P_go, Tline_go, Pline_go = line_from_go(df_go, s_factor=0.002)
 
-# ---------- RMSE vs experiment (C1–C3) ----------
+# RMSE vs experiment (C1–C3)
 def rmse_vs_exp(df_model, exp_df):
     z = df_model["z1"].to_numpy()
     T = df_model["Tc[K]"].to_numpy()
@@ -170,13 +166,13 @@ ax.scatter(exp_keep["Tc_K"], exp_keep["Pc_MPa"],
            marker="^", facecolors="none", edgecolors="k",
            s=110, linewidths=1.8, zorder=7)
 
-
-
 ax.set_xlabel("Temperature (K)", labelpad=28, fontsize=30)
 ax.set_ylabel("Pressure (MPa)", labelpad=28, fontsize=30)
 ax.tick_params(axis="both", which="major", labelsize=30)
 
 ax.grid(True, which="major", color="0.92", linewidth=1.0)
+
+# Set the limits
 ax.set_xlim(120, 200)
 ax.set_ylim(2.5, 6.0)
 
@@ -203,7 +199,6 @@ ax.legend(handles=legend_elements, loc="upper left", frameon=False, fontsize=25,
 z = df_nr["z1"].to_numpy()
 T = df_nr["Tc[K]"].to_numpy()
 P = df_nr["Pc[MPa]"].to_numpy()
-
 
 plt.savefig("C1–N2_NR_GO_EXP_overlay_clean.png", dpi=900, bbox_inches="tight")
 plt.savefig("C1–N2_NR_GO_EXP_overlay_clean.pdf",  bbox_inches="tight")
