@@ -10,7 +10,7 @@ Notes:
 
 Usage:
 > pip install -r requirements.txt
-> python src/go_solver.py
+> python src/go_solver_isolated.py
 """
 
 import numpy as np
