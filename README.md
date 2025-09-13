@@ -10,7 +10,6 @@ Two computational strategies are implemented:
 Note: This project uses the readily available PC-SAFT EOS implementation from [Thermopack](https://github.com/thermotools/thermopack).  
 This repository focuses on the computational methods (NR and GO/DE) and their performance comparison.
 
-
 Binary critical loci (Hicks \& Young, 1975):
 
 Columns:
