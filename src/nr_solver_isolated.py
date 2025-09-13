@@ -1,18 +1,15 @@
 """
-nr_solver.py
-----------------
 Newton–Raphson (NR) solver via Heidemann-Khalil criticality conditions for isolated pure-compound and mixture
 critical points using Thermopack's original PC-SAFT EOS.
 
-Notes
------
+Notes:
 - Uses the component list in (T,V) bounds.
 - Fixes overall composition (x = z).
 - Solves HK residuals: [g_i = (H d)_i, g = directional cubic, h = ||d||^2-1].
 - Renormalizes Δn every update.
 - All binary interaction parameters (k_ij) are set to zero (predictive baseline).
 
-Usage
+Usage:
   pip install -r requirements.txt
   python src/nr_solver.py
 """
