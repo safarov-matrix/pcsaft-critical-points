@@ -1,5 +1,6 @@
-This repository accompanies our manuscript on mixture critical points with the Perturbed-Chain Statistical Associating Fluid Theory (PC-SAFT) Equation of State (EOS).  
-It provides reproducible code to calculate:
+This repository accompanies our manuscript on mixture critical points with the Perturbed-Chain Statistical Associating Fluid Theory (PC-SAFT) Equation of State (EOS).  It focuses on the computational methods and their performance comparison.
+
+The repository provides reproducible code to calculate:
 
 * Pure compound and multicomponent critical points
 * Binary critical loci
@@ -10,8 +11,6 @@ Two computational strategies are implemented:
 * Global Optimization (GO) formulation solved with Differential Evolution (DE) based on PC-SAFT EOS
 
 Note: This project uses the readily available PC-SAFT EOS implementation from [Thermopack](https://github.com/thermotools/thermopack).  
-This repository focuses on the computational methods (NR and GO/DE) and their performance comparison.
-
 
 Multicomponent mixtures (Dimitrakopoulos \*et al.\*, 2014)
 
@@ -26,8 +25,6 @@ Columns:
 - Columns not used in a given mixture are left blank (or zero).  
 
 Source: P. Dimitrakopoulos, W. Jia, C. Li, An improved computational method for the calculation of mixture liquid–vapor critical points, Int. J. Thermophys. 35 (2014) 865–889. https://doi.org/10.1007/s10765-014-1680-7.
-
-
 
 Binary critical loci (Hicks \\\& Young, 1975):
 
@@ -44,4 +41,3 @@ Columns:
 - `Pc_MPa`: critical pressure \\\[MPa]
 
 Source: C.P. Hicks, C.L. Young, Gas–liquid critical properties of binary mixtures, Chem. Rev. 75 (1975) 119–175. https://doi.org/10.1021/cr60294a001.
-
