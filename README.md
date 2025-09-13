@@ -13,16 +13,9 @@ Note: This project uses the readily available PC-SAFT EOS implementation from [T
 This repository focuses on the computational methods (NR and GO/DE) and their performance comparison.
 
 
-
-
-
-\### Multicomponent mixtures (Dimitrakopoulos \*et al.\*, 2014)
-
-
+Multicomponent mixtures (Dimitrakopoulos \*et al.\*, 2014)
 
 File: `data/mixtures\_dim-wen-2014.csv`  
-
-
 
 \*\*Columns:\*\*
 
@@ -32,41 +25,23 @@ File: `data/mixtures\_dim-wen-2014.csv`
 
 \- Columns not used in a given mixture are left blank (or zero).  
 
-
-
-\*\*Source:\*\* Dimitrakopoulos, D., Wen, J., \& co-authors (2014). \*A predictive framework for multicomponent hydrocarbon mixtures…\* Fluid Phase Equilibria, 377, 76–85. https://doi.org/10.1016/j.fluid.2014.04.006
-
-
+Source: P. Dimitrakopoulos, W. Jia, C. Li, An improved computational method for the calculation of mixture liquid–vapor critical points, Int. J. Thermophys. 35 (2014) 865–889. https://doi.org/10.1007/s10765-014-1680-7.
 
 
 
 Binary critical loci (Hicks \\\& Young, 1975):
 
-
-
 Columns:
-
-
 
 \\- `Mixture`: label (e.g., C1–C2)
 
-
-
 \\- `Comp\_1`, `Comp\_2`: component identifiers (Thermopack IDs)
-
-
 
 \\- `z1`: mole fraction of `Comp\_1`
 
-
-
 \\- `Tc\_K`: critical temperature \\\[K]
 
-
-
 \\- `Pc\_MPa`: critical pressure \\\[MPa]
-
-
 
 Source: C.P. Hicks, C.L. Young, Gas–liquid critical properties of binary mixtures, Chem. Rev. 75 (1975) 119–175. https://doi.org/10.1021/cr60294a001.
 
