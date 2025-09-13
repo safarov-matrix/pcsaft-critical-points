@@ -14,8 +14,6 @@ Run:
 """
 
 
-#!pip -q install thermopack
-
 import numpy as np
 from numpy.linalg import norm
 import matplotlib.pyplot as plt
