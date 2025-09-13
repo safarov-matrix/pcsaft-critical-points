@@ -1,6 +1,7 @@
 """
 examples/mix11_go_surface.py
-Full GO/DE example for an 11-component mixture using Thermopack PC-SAFT, including 2D/3D plotting of log F(T,V).
+Full GO/DE example for an 11-component mixture using Thermopack's PC-SAFT EOS, 
+including 2D/3D plotting of log F(T,V) (Objective Function).
 
 - Uses Thermopack's PC-SAFT EOS (we do NOT implement PC-SAFT ourselves).
 - All binary interaction parameters k_ij are set to 0 (predictive baseline).
