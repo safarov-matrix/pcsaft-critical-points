@@ -1,4 +1,5 @@
-!pip -q install thermopack
+#!pip -q install thermopack
+
 import numpy as np
 from numpy.linalg import norm
 import matplotlib.pyplot as plt
