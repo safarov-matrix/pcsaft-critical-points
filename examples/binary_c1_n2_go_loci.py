@@ -1,4 +1,22 @@
-#!pip install thermopack
+"""
+Full Global Optimization (GO) example for a binary mixture (C1–N2) using Thermopack's PC-SAFT EOS,
+including CSV export and an overlay plot against experimental data.
+
+- Uses Thermopack's PC-SAFT EOS.
+- All binary interaction parameters k_ij are set to 0 (predictive baseline).
+- Locus is computed by calling eos.critical(n) on a composition grid.
+
+Run:
+  pip install -r requirements.txt
+  python examples/binary_c1_n2_go_loci.py
+
+Input:
+  data/Methane_Nitrogen_Critical_Data.csv  (experimental points)
+
+Output:
+  C1-N2_GO_critical_locus_PT.csv
+  C1-N2_GO_overlay_clean.png / .pdf
+"""
 
 import thermopack as tp
 import jax.numpy as jnp
@@ -23,11 +41,9 @@ from numpy import isfinite
 from numpy.random import rand
 from numpy.random import choice
 
-
 from scipy.optimize import differential_evolution
 from scipy.optimize import minimize
 from scipy.optimize import dual_annealing
-
 
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mticker
@@ -37,14 +53,10 @@ from matplotlib.ticker import AutoMinorLocator
 from matplotlib import pyplot
 from matplotlib import cm
 
-
 from scipy.interpolate import interp1d
 from scipy.interpolate import UnivariateSpline
 from scipy.interpolate import PchipInterpolator
 from scipy.signal import savgol_filter
-
-
-
 
 uploaded = files.upload()
 
@@ -55,8 +67,6 @@ for _name in ['min','max','sum','argmin','argmax','around','clip','asarray','ran
 import numpy as np
 N = importlib.import_module("numpy")
 print("np.min from:", getattr(np.min, '__module__', '?'))
-
-
 
 exp = pd.read_csv("Methane_Nitrogen_Critical_Data.csv")
 
