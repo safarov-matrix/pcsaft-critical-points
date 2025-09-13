@@ -11,7 +11,7 @@ Notes:
 
 Usage:
   pip install -r requirements.txt
-  python src/nr_solver.py
+  python src/nr_solver_isolated.py
 """
 
 import numpy as np
