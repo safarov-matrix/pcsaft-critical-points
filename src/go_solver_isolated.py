@@ -1,18 +1,14 @@
 """
-go_solver.py
-------------
 Global Optimization (GO) via Differential Evolution (DE) for isolated pure-compound and mixture
 critical points using Thermopack's original PC-SAFT EOS.
 
-Notes
------
+Notes:
 - PC-SAFT EOS is provided by Thermopack; this script implements the optimization workflow.
 - We search over (T, V) for fixed overall composition n (normalized to mole fractions).
 - Objective: F(T,V) = f1^2 + (∇_n f1 · n)^2, where f1 = λ_min(dμ/dn) at fixed (T,V).
 - All binary interaction parameters (k_ij) are set to zero (predictive baseline).
 
-Usage
------
+Usage:
 > pip install -r requirements.txt
 > python src/go_solver.py
 """
