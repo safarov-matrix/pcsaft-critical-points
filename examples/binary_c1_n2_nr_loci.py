@@ -1,9 +1,8 @@
 """
-examples/binary_c1_n2_nr_locus.py
-Full NR example for a binary mixture (C1–N2) using Thermopack PC-SAFT,
+Full Newton-Raphson (NR) example for a binary mixture (C1–N2) using Thermopack's PC-SAFT EOS,
 including CSV export and an overlay plot against experimental data.
 
-- Uses Thermopack's PC-SAFT EOS (we do NOT implement PC-SAFT ourselves).
+- Uses Thermopack's PC-SAFT EOS.
 - All binary interaction parameters k_ij are set to 0 (predictive baseline).
 - Locus is computed by calling eos.critical(n) on a composition grid.
 
@@ -30,7 +29,7 @@ jax.config.update("jax_enable_x64", True)
 
 import thermopack as tp
 
-# ------------------- Plot style -------------------
+# Plot style 
 plt.rcParams.update({
     "font.family": "sans-serif",
     "font.sans-serif": ["Arial", "DejaVu Sans"],
@@ -42,7 +41,7 @@ plt.rcParams.update({
     "ps.fonttype": 42,
 })
 
-# ------------------- Mixture / EOS -------------------
+# Mixture / EOS
 species   = ("C1", "N2")   # Thermopack IDs
 mix_label = "C1-N2"
 
@@ -54,12 +53,12 @@ for i in range(1, nc+1):
     for j in range(i+1, nc+1):
         eos.set_kij(i, j, 0.0)
 
-# ------------------- Composition grid -------------------
+# Composition grid
 N_GRID = 61
 EPS_Z  = 1e-6
 z1_grid = np.linspace(EPS_Z, 1.0 - EPS_Z, N_GRID)
 
-# ------------------- NR locus sweep -------------------
+# NR sweep
 rows, skipped = [], 0
 for z1 in z1_grid:
     n = np.array([z1, 1.0 - z1], dtype=float)
@@ -82,7 +81,7 @@ df_nr.to_csv(csv_path, index=False)
 print(f"Saved: {csv_path}  |  points: {len(df_nr)}  |  skipped: {skipped}")
 print(df_nr[["Tc[K]","Pc[MPa]"]].describe())
 
-# ------------------- Load experimental CSV -------------------
+# Load experimental CSV
 # Expecting: data/Methane_Nitrogen_Critical_Data.csv
 exp_path = "data/Methane_Nitrogen_Critical_Data.csv"
 exp = pd.read_csv(exp_path).copy()
@@ -114,7 +113,7 @@ if "z1" not in exp.columns:
         "or a nitrogen composition column so z1 can be inferred as 1 - z_N2."
     )
 
-# ------------------- RMSE vs experiment -------------------
+# RMSE vs experiment
 z_mod = df_nr["z1"].to_numpy()
 T_mod = df_nr["Tc[K]"].to_numpy()
 P_mod = df_nr["Pc[MPa]"].to_numpy()
@@ -126,7 +125,7 @@ rmse_T = float(np.sqrt(np.mean((Tc_hat - exp_keep["Tc_K"])**2)))
 rmse_P = float(np.sqrt(np.mean((Pc_hat - exp_keep["Pc_MPa"])**2)))
 print(f"NR RMSE ({mix_label}): ΔT = {rmse_T:.2f} K, ΔP = {rmse_P:.3f} MPa (N={len(exp_keep)})")
 
-# ------------------- Smooth locus with PCHIP -------------------
+# Smooth loci with PCHIP
 z1 = df_nr["z1"].to_numpy()
 Tc = df_nr["Tc[K]"].to_numpy()
 Pc = df_nr["Pc[MPa]"].to_numpy()
@@ -134,7 +133,7 @@ z_dense = np.linspace(z1.min(), z1.max(), 1500)
 T_line  = PchipInterpolator(z1, Tc)(z_dense)
 P_line  = PchipInterpolator(z1, Pc)(z_dense)
 
-# ------------------- Plot: NR + Experimental -------------------
+# Plot: NR + Experimental
 plt.close('all')
 fig, ax = plt.subplots(figsize=(11, 9), dpi=300)
 fig.subplots_adjust(left=0.20, right=0.86, bottom=0.20, top=0.95)
