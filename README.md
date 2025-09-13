@@ -1,17 +1,25 @@
-This repository accompanies our manuscript on mixture critical points with the Perturbed-Chain Statistical Associating Fluid Theory (PC-SAFT) Equation of State (EOS).  It focuses on the computational methods and their performance comparison.
+This repository accompanies our manuscript on mixture critical points calculation using the Perturbed-Chain Statistical Associating Fluid Theory (PC-SAFT) Equation of State (EOS) via two distinct computational methods, namely the root-finding and optimization formulations. It specifically focuses on the computational methods and their performance comparison when combined with PC-SAFT EOS.
 
 The repository provides reproducible code to calculate:
 
-* Pure compound and multicomponent critical points
-* Binary critical loci
+1. Pure-compound and multicomponent critical points
+2. Binary critical loci
 
 Two computational strategies are implemented:
 
-* Newton–Raphson (NR) formulation of the Heidemann-Khalil (HK) criticality conditions based on PC-SAFT EOS
-* Global Optimization (GO) formulation solved with Differential Evolution (DE) based on PC-SAFT EOS
+1. Newton–Raphson (NR) formulation of the Heidemann-Khalil (HK) criticality conditions based on PC-SAFT EOS
+2. Global Optimization (GO) formulation solved with Differential Evolution (DE) based on PC-SAFT EOS
 
-Note: This project uses the readily available PC-SAFT EOS implementation from [Thermopack](https://github.com/thermotools/thermopack).  
+In this study, 11 pure compounds (hydrocarbon and hon-hydrocarbon) and 44 mixtures (from 2 components to 11 components) are tested. Additionally, 6 binary mixtures from a different compilations are used to build composition-dependent critical loci using both computational methods.
 
+Note: This project implements the readily available PC-SAFT EOS from [Thermopack](https://github.com/thermotools/thermopack).  
+
+Sources:
+[1] SINTEF Energy Research, NTNU, ThermoPack [software], GitHub repository.https://github.com/thermotools/thermopack, accessed 8 December 2024.
+[2] Ø. Wilhelmsen, A. Aasen, G. Skaugen, P. Aursand, A. Austegard, E. Aursand, M.Aa. Gjennestad, H. Lund, G. Linga, M. Hammer, Thermodynamic modeling with equations of state: Present challenges with established methods, Ind. Eng. Chem. Res. 56 (2017) 3503–3515. https://doi.org/10.1021/acs.iecr.7b00317.
+[3] P. Aursand, M.Aa. Gjennestad, E. Aursand, M. Hammer, Ø. Wilhelmsen, The spinodal of single- and multi-component fluids and its role in the development of modern equations of state, Fluid Phase Equilib. 436 (2017) 98–112. https://doi.org/10.1016/j.fluid.2016.12.018.
+[4] A. Aasen, M. Hammer, Å. Ervik, E.A. Müller, Ø. Wilhelmsen, Equation of state and force fields for Feynman–Hibbs-corrected Mie fluids. I. Application to pure helium, neon, hydrogen, and deuterium, J. Chem. Phys. 151 (2019) 035103. https://doi.org/10.1063/1.5111364.
+[5] T. van Westen, M. Hammer, B. Hafskjold, A. Aasen, J. Gross, Ø. Wilhelmsen, Perturbation theories for fluids with short-ranged attractive forces: A case study of the Lennard-Jones spline fluid, J. Chem. Phys. 156 (2022) 104504. https://doi.org/10.1063/5.0082690.
 
 Pure component PC-SAFT parameters and critical data:
 
