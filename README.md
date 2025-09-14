@@ -11,7 +11,7 @@ Two distinct computational strategies are implemented in this study:
 1. Newton–Raphson (NR) formulation of the Heidemann-Khalil (HK) criticality conditions based on PC-SAFT EOS
 2. Global Optimization (GO) formulation solved with Differential Evolution (DE) based on PC-SAFT EOS
 
-# Scope
+# Scope and Data Sources
 
 In this study, 11 pure compounds (hydrocarbon and hon-hydrocarbon) and 44 mixtures (from 2 components to 11 components) are tested. Additionally, 6 binary mixtures from a different compilations are used to build composition-dependent critical loci using both computational methods.
 
@@ -92,6 +92,16 @@ Utilized Data:
 Sources: 
 [1] C.P. Hicks, C.L. Young, Gas–liquid critical properties of binary mixtures, Chem. Rev. 75 (1975) 119–175. https://doi.org/10.1021/cr60294a001.
 
+
+# Requirements 
+
+- Python 3.10+
+- [Thermopack](https://github.com/thermotools/thermopack) (install via pip: pip install thermopack)
+- NumPy ≥ 1.24
+- SciPy ≥ 1.11
+- JAX ≥ 0.4.20 (with jax_enable_x64=True)
+- Pandas ≥ 2.0
+-  Matplotlib ≥ 3.8
 
 # Example Results
 
