@@ -4,9 +4,9 @@ This repository is part of our study on mixture critical points calculation usin
 The repository provides reproducible code to calculate:
 
 1. Pure-compound and multicomponent critical points
-2. Binary critical loci
+2. Composition-dependent binary critical loci
 
-Two computational strategies are implemented in this study:
+Two distinct computational strategies are implemented in this study:
 
 1. Newton–Raphson (NR) formulation of the Heidemann-Khalil (HK) criticality conditions based on PC-SAFT EOS
 2. Global Optimization (GO) formulation solved with Differential Evolution (DE) based on PC-SAFT EOS
