@@ -1,4 +1,5 @@
-This repository is part of our study on mixture critical points calculation using the Perturbed-Chain Statistical Associating Fluid Theory (PC-SAFT) Equation of State (EOS) via two distinct computational methods, namely the root-finding and optimization formulations. It specifically focuses on the computational methods and their performance comparison when combined with PC-SAFT EOS. Therefore we set binary interaction parameters (k_ij) to 0 so that we can concentrate on the predictive capabilities of the given computational techniques.
+# Overview
+This repository is part of our study on mixture critical points calculation using the Perturbed-Chain Statistical Associating Fluid Theory (PC-SAFT) Equation of State (EOS) via two distinct computational methods, namely the root-finding and optimization formulations. It specifically focuses on the computational methods and their performance comparison when combined with PC-SAFT EOS. All binary interaction parameters (k_ij) are set to zero in order to highlight the predictive performance of the methods without parameter fitting.
 
 The repository provides reproducible code to calculate:
 
