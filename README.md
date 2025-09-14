@@ -115,7 +115,7 @@ You are free to use, modify, and distribute this code with proper attribution. S
 
 # Citation  
 
-If you use this repository in your research, please cite it as follows: 
+If you use this repository in your research, please cite it as follows:
 
 # References
 
