@@ -123,4 +123,4 @@ NR critical loci for C1–N2 compared to the experimental critical data.
 ![C1–N2 NR+GO+EXP](examples/binary_c1_n2_nr_go/C1-N2_NR_GO_EXP_overlay_clean.png)  
 Combined NR and GO loci for C1–N2 compared to the experimental critical data.
 
-For any questions and/or issues encountered while reproducing the work, please do not hesitate to reach out directly at safarov@ualberta.ca.
+For any questions and/or issues encountered while reproducing the work, please do not hesitate to email me at safarov@ualberta.ca or send me a direct message at [LinkedIn](https://www.linkedin.com/in/mustajab-safarov/).
