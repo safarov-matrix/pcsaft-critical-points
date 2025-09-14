@@ -11,7 +11,7 @@ Two computational strategies are implemented in this study:
 1. Newton–Raphson (NR) formulation of the Heidemann-Khalil (HK) criticality conditions based on PC-SAFT EOS
 2. Global Optimization (GO) formulation solved with Differential Evolution (DE) based on PC-SAFT EOS
 
-# Scope and Data
+# Scope
 
 In this study, 11 pure compounds (hydrocarbon and hon-hydrocarbon) and 44 mixtures (from 2 components to 11 components) are tested. Additionally, 6 binary mixtures from a different compilations are used to build composition-dependent critical loci using both computational methods.
 
@@ -27,7 +27,7 @@ Pure component PC-SAFT parameters and critical data:
 
 File: `data/pure_components_pcsaft_params.csv`
 
-Columns:
+Utilized Data:
 
 - `Component`: identifier (Thermopack ID, e.g., C1, C2, nC4, CO2, N2)
 - `m`: segment number (dimensionless)
@@ -61,7 +61,7 @@ Multicomponent mixture:
 
 File: `data/44_mix_dim_wen_2014.csv`  
 
-Columns:
+Utilized Data:
 
 - `Mixture_No`: index (1–44, as in Table S1 of your manuscript)  
 
@@ -77,7 +77,7 @@ Binary critical loci:
 
 File: `data/6_binary_mix_crit_loci_hicks_young_1975.csv`
 
-Columns:
+Utilized Data:
 
 - `Mixture`: label (e.g., C1–C2)
 
