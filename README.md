@@ -63,7 +63,7 @@ Sources:
 [8] U. Setzmann, W. Wagner, A new equation of state and tables of thermodynamic properties for methane, J. Phys. Chem. Ref. Data 20 (1991) 1061–1155. https://doi.org/10.1063/1.555898.
 
 
-Multicomponent mixtures (Dimitrakopoulos et al., 2014)
+Multicomponent mixture:
 
 File: `data/mixtures\_dim-wen-2014.csv`  
 
@@ -77,7 +77,7 @@ Columns:
 
 Source: P. Dimitrakopoulos, W. Jia, C. Li, An improved computational method for the calculation of mixture liquid–vapor critical points, Int. J. Thermophys. 35 (2014) 865–889. https://doi.org/10.1007/s10765-014-1680-7.
 
-Binary critical loci (Hicks & Young, 1975):
+Binary critical loci:
 
 Columns:
 
