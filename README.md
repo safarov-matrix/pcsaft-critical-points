@@ -45,13 +45,23 @@ Columns:
 - `Source`: reference for the EOS parameters and critical data
 
 Sources:  
-- D. Bücker, W. Wagner, J. Phys. Chem. Ref. Data 35 (2006) 205–266, 929–1019.  
-- E.W. Lemmon, M.O. McLinden, W. Wagner, J. Chem. Eng. Data 54 (2009) 3141–3180.  
-- D. Ambrose, J. Walton, Pure Appl. Chem. 61 (1989) 1395–1403.  
-- R. Span, W. Wagner, J. Phys. Chem. Ref. Data 25 (1996) 1509–1596.  
-- R. Span et al., J. Phys. Chem. Ref. Data 29 (2000) 1361–1433.  
-- U. Setzmann, W. Wagner, J. Phys. Chem. Ref. Data 20 (1991) 1061–1155.  
-- J. Shi et al., AIChE J. 70 (2024) e18466.  
+
+[1] J. Shi, C. Wu, H. Liu, H. Li, Application of volume-translated rescaled perturbed-chain statistical associating fluid theory equation of state to pure compounds using an expansive experimental database, AIChE J. 70 (2024) e18466. https://doi.org/10.1002/aic.18466.
+
+[2] D. Bücker, W. Wagner, A reference equation of state for the thermodynamic properties of ethane for temperatures from the melting line to 675 K and pressures up to 900 MPa, J. Phys. Chem. Ref. Data 35 (2006) 205–266. https://doi.org/10.1063/1.1859286.
+
+[3] E.W. Lemmon, M.O. McLinden, W. Wagner, Thermodynamic properties of propane. III. A reference equation of state for temperatures from the melting line to 650 K and pressures up to 1000 MPa, J. Chem. Eng. Data 54 (2009) 3141–3180. https://doi.org/10.1021/je900217v.
+
+[4] D. Bücker, W. Wagner, Reference equations of state for the thermodynamic properties of fluid phase n-butane and isobutane, J. Phys. Chem. Ref. Data 35 (2006) 929 1019. https://doi.org/10.1063/1.1901687.
+
+[5] D. Ambrose, J. Walton, Vapour pressures up to their critical temperatures of normal alkanes and 1-alkanols: A critical evaluation, Pure Appl. Chem. 61 (1989) 1395–1403. https://doi.org/10.1351/pac198961081395.
+
+[6] R. Span, W. Wagner, A new equation of state for carbon dioxide covering the fluid region from the triple-point temperature to 1100 K at pressures up to 800 MPa, J. Phys. Chem. Ref. Data 25 (1996) 1509–1596. https://doi.org/10.1063/1.555991.
+
+[7] R. Span, E.W. Lemmon, R.T. Jacobsen, W. Wagner, A. Yokozeki, A reference equation of state for the thermodynamic properties of nitrogen for temperatures from 63.151 to 1000 K and pressures to 2200 MPa, J. Phys. Chem. Ref. Data 29 (2000) 1361–1433. https://doi.org/10.1063/1.1349047.
+
+[8] U. Setzmann, W. Wagner, A new equation of state and tables of thermodynamic properties for methane, J. Phys. Chem. Ref. Data 20 (1991) 1061–1155. https://doi.org/10.1063/1.555898.
+
 
 Multicomponent mixtures (Dimitrakopoulos et al., 2014)
 
