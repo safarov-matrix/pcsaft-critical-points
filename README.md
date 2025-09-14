@@ -65,7 +65,7 @@ Sources:
 
 Multicomponent mixture:
 
-File: `data/mixtures\_dim-wen-2014.csv`  
+File: `data/44_mix_dim_wen_2014.csv`  
 
 Columns:
 
@@ -78,6 +78,8 @@ Columns:
 Source: P. Dimitrakopoulos, W. Jia, C. Li, An improved computational method for the calculation of mixture liquid–vapor critical points, Int. J. Thermophys. 35 (2014) 865–889. https://doi.org/10.1007/s10765-014-1680-7.
 
 Binary critical loci:
+
+File: `data/6_binary_mix_crit_loci_hicks_young_1975.csv`
 
 Columns:
 
