@@ -20,15 +20,6 @@ Sources:
 
 [2] SINTEF Energy Research, NTNU, ThermoPack [software], GitHub repository.https://github.com/thermotools/thermopack, accessed 8 December 2024.
 
-[3] Ø. Wilhelmsen, A. Aasen, G. Skaugen, P. Aursand, A. Austegard, E. Aursand, M.Aa. Gjennestad, H. Lund, G. Linga, M. Hammer, Thermodynamic modeling with equations of state: Present challenges with established methods, Ind. Eng. Chem. Res. 56 (2017) 3503–3515. https://doi.org/10.1021/acs.iecr.7b00317.
-
-[4] P. Aursand, M.Aa. Gjennestad, E. Aursand, M. Hammer, Ø. Wilhelmsen, The spinodal of single- and multi-component fluids and its role in the development of modern equations of state, Fluid Phase Equilib. 436 (2017) 98–112. https://doi.org/10.1016/j.fluid.2016.12.018.
-
-[5] A. Aasen, M. Hammer, Å. Ervik, E.A. Müller, Ø. Wilhelmsen, Equation of state and force fields for Feynman–Hibbs-corrected Mie fluids. I. Application to pure helium, neon, hydrogen, and deuterium, J. Chem. Phys. 151 (2019) 035103. https://doi.org/10.1063/1.5111364.
-
-[6] T. van Westen, M. Hammer, B. Hafskjold, A. Aasen, J. Gross, Ø. Wilhelmsen, Perturbation theories for fluids with short-ranged attractive forces: A case study of the Lennard-Jones spline fluid, J. Chem. Phys. 156 (2022) 104504. https://doi.org/10.1063/5.0082690.
-
-
 Pure component PC-SAFT parameters and critical data:
 
 File: `data/pure_components_pcsaft_params.csv`
@@ -75,7 +66,9 @@ Columns:
 
 - Columns not used in a given mixture are left blank (or zero).  
 
-Source: P. Dimitrakopoulos, W. Jia, C. Li, An improved computational method for the calculation of mixture liquid–vapor critical points, Int. J. Thermophys. 35 (2014) 865–889. https://doi.org/10.1007/s10765-014-1680-7.
+Sources: 
+
+[1] P. Dimitrakopoulos, W. Jia, C. Li, An improved computational method for the calculation of mixture liquid–vapor critical points, Int. J. Thermophys. 35 (2014) 865–889. https://doi.org/10.1007/s10765-014-1680-7.
 
 Binary critical loci:
 
@@ -93,7 +86,8 @@ Columns:
 
 - `Pc_MPa`: critical pressure \\\[MPa]
 
-Source: C.P. Hicks, C.L. Young, Gas–liquid critical properties of binary mixtures, Chem. Rev. 75 (1975) 119–175. https://doi.org/10.1021/cr60294a001.
+Sources: 
+[1] C.P. Hicks, C.L. Young, Gas–liquid critical properties of binary mixtures, Chem. Rev. 75 (1975) 119–175. https://doi.org/10.1021/cr60294a001.
 
 Example Results:
 
