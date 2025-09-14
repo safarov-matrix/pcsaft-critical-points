@@ -1,11 +1,11 @@
-This repository accompanies our manuscript on mixture critical points calculation using the Perturbed-Chain Statistical Associating Fluid Theory (PC-SAFT) Equation of State (EOS) via two distinct computational methods, namely the root-finding and optimization formulations. It specifically focuses on the computational methods and their performance comparison when combined with PC-SAFT EOS.
+This repository is part of our manuscript on mixture critical points calculation using the Perturbed-Chain Statistical Associating Fluid Theory (PC-SAFT) Equation of State (EOS) via two distinct computational methods, namely the root-finding and optimization formulations. It specifically focuses on the computational methods and their performance comparison when combined with PC-SAFT EOS.
 
 The repository provides reproducible code to calculate:
 
 1. Pure-compound and multicomponent critical points
 2. Binary critical loci
 
-Two computational strategies are implemented:
+Two computational strategies are implemented in this study:
 
 1. Newton–Raphson (NR) formulation of the Heidemann-Khalil (HK) criticality conditions based on PC-SAFT EOS
 2. Global Optimization (GO) formulation solved with Differential Evolution (DE) based on PC-SAFT EOS
