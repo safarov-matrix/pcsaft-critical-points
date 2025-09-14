@@ -97,6 +97,21 @@ Sources:
 [1] C.P. Hicks, C.L. Young, Gas–liquid critical properties of binary mixtures, Chem. Rev. 75 (1975) 119–175. https://doi.org/10.1021/cr60294a001.
 
 
+# Repository Structure
+
+- `src/` → Core solvers (NR and GO implementations)
+- `examples/` → Example scripts and generated plots
+  - `binary_c1_n2_go/` → GO results for C1–N2
+  - `binary_c1_n2_nr/` → NR results for C1–N2
+  - `binary_c1_n2_nr_go/` → Combined NR+GO overlay for C1–N2
+  - `go_surface/` → Example GO objective function surface plots
+  - `nr_surface/` → Example NR residual norm plots
+- `data/` → Input datasets  
+  - `pure_components_pcsaft_params.csv`
+  - `44_mix_dim_wen_2014.csv`
+  - `6_binary_mix_crit_loci_hicks_young_1975.csv`
+
+
 # Requirements 
 
 - Python 3.10+
@@ -126,4 +141,4 @@ NR critical loci for a binary mixture containing C1–N2 juxtaposed against the 
 ![C1–N2 NR+GO+EXP](examples/binary_c1_n2_nr_go/C1-N2_NR_GO_EXP_overlay_clean.png)  
 Combined NR and GO loci for a binary mixture containing C1–N2 juxtaposed against the experimental critical data.
 
-For any questions and/or issues encountered while reproducing the work, please do not hesitate to email me at safarov@ualberta.ca or send me a direct message at [LinkedIn](https://www.linkedin.com/in/mustajab-safarov/).
+For any questions and/or issues encountered while reproducing the work and/or you would like to chat about thermodynamics, please do not hesitate to email me at safarov@ualberta.ca or send me a direct message at [LinkedIn](https://www.linkedin.com/in/mustajab-safarov/).
