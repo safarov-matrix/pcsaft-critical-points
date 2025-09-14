@@ -18,7 +18,7 @@ Sources:
 
 [1] J. Gross, G. Sadowski, Perturbed-chain SAFT: An equation of state based on a perturbation theory for chain molecules, Ind. Eng. Chem. Res. 40 (2001) 1244–1260. https://doi.org/10.1021/ie0003887.
 
-[2] SINTEF Energy Research, NTNU, ThermoPack [software], GitHub repository.https://github.com/thermotools/thermopack, accessed 8 December 2024.
+[2] SINTEF Energy Research, NTNU, ThermoPack [software], GitHub repository. https://github.com/thermotools/thermopack.
 
 Pure component PC-SAFT parameters and critical data:
 
