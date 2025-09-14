@@ -106,8 +106,8 @@ NR critical loci for C1–N2 compared to the experimental critical data.
 ![C1–N2 NR+GO+EXP](examples/binary_c1_n2_nr_go/C1-N2_NR_GO_EXP_overlay_clean.png)  
 Combined NR and GO loci for C1–N2 compared to the experimental critical data.
 
-![GO surface](examples/go_surface/ObjF_41_GO_DE.png)  
-Objective function surface built using GO with DE.
-
 ![NR surface](examples/nr_surface/NormRes_41_NR.png)  
 Norm of the residuals on a log scale built using NR.
+
+![GO surface](examples/go_surface/ObjF_41_GO_DE.png)  
+Objective function surface built using GO with DE.
