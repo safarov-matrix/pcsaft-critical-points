@@ -117,6 +117,8 @@ You are free to use, modify, and distribute this code with proper attribution. S
 
 If you use this repository in your research, please cite it as follows:
 
+Safarov, M., Jayaprakash, V., Wu, C., & Li, H. (2025). *Numerically Stable Determination of Mixture Critical Points and Loci with PC-SAFT EOS*. The Journal of Supercritical Fluids. https://doi.org/10.1016/j.supflu.2025.106817
+
 # References
 
 [1] J. Gross, G. Sadowski, Perturbed-chain SAFT: An equation of state based on a perturbation theory for chain molecules, *Ind. Eng. Chem. Res.* 40 (2001) 1244–1260. https://doi.org/10.1021/ie0003887  
