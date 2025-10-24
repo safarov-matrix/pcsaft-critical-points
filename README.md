@@ -115,7 +115,7 @@ You are free to use, modify, and distribute this code with proper attribution. S
 
 # Citation  
 
-If you use this repository in your research, please cite it as follows:
+If you use this repository, please ensure you cite the work as follows:
 
 Safarov, M., Jayaprakash, V., Wu, C., & Li, H. (2025). *Numerically Stable Determination of Mixture Critical Points and Loci with PC-SAFT EOS*. The Journal of Supercritical Fluids. https://doi.org/10.1016/j.supflu.2025.106817
 
